@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular'), local('BebasNeue-Regular'),
+        url('../fonts/BebasNeue-Regular.woff') format('woff2'),
+        url('../fonts/BebasNeue-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 * {
   box-sizing: border-box;
 }
@@ -50,3 +59,50 @@ body {
   line-height: 20px;
   text-decoration: none;
 }
+/*    MAIN     */
+.main {
+  padding-top: 54px;
+}
+.main-container {
+  display: flex;
+}
+.home-image path {
+  opacity: 0;
+}
+.home-image path:hover {
+  opacity: 1;
+}
+.main-button {
+  background: #3596F5;
+  color: #fff;
+  border: none;
+  padding: 16px 36px;
+}
+.main-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.main-title {
+  font-size: 37px;
+  line-height: 44px;
+  font-family: 'Bebas Neue';
+  color: #635854;
+}
+.main-counter {
+  color:#635854;
+  font-size: 135px;
+  font-family: 'Bebas Neue';
+}
+.arrow-button {
+  border: none;
+  background: none;
+}
+.button-down {
+  transform: rotateX(180deg);
+}
+
