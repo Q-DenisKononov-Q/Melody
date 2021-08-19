@@ -72,6 +72,9 @@ body {
 .home-image path:hover {
   opacity: 1;
 }
+path.current-floor {
+  opacity: 1;
+}
 .main-button {
   background: #3596F5;
   color: #fff;
