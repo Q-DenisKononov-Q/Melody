@@ -21,6 +21,7 @@ body {
   background-color: #635854;
   padding: 12px 0px;
   border-bottom: 4px solid #3596F5;
+  
 }
 .navbar {
   display: flex;
@@ -62,6 +63,7 @@ body {
 /*    MAIN     */
 .main {
   padding-top: 54px;
+  padding-bottom: 99px;
 }
 .main-container {
   display: flex;
@@ -96,7 +98,7 @@ path.current-floor {
   font-family: 'Bebas Neue';
   color: #635854;
 }
-.main-counter {
+.floor-counter {
   color:#635854;
   font-size: 135px;
   font-family: 'Bebas Neue';
@@ -108,4 +110,136 @@ path.current-floor {
 .button-down {
   transform: rotateX(180deg);
 }
+/*    MODAL    */
+.modal {
+  position: fixed; /* поверх всего сайта */
+  left: 0; /* приклеиваем к левому краю */
+  top: 0; /* приклеиваем к верзу */
+  height: 100%;
+  width: 100%;
+  background-color:  rgba(0, 0, 0, 0.8); /* полупрозрачный фоновый черный цвет */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s;
+}
+.is-open {
+  opacity: 1;
+  transform: scale(1);
 
+}
+.modal-dialog {
+  max-width: 1000px;
+  min-height: 565px;
+  background-color: #fff;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  transform: translateY(-10%);
+  transition: transform 0.2s, opacity 0.2s;
+  transition-delay: 0.2s;
+  opacity: 0;
+}
+.is-open > .modal-dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal-title {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: 'Bebas Neue';
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+.modal-image {
+  width: 60%;
+  background-color: #EBEBEB;
+  text-align: center;
+  padding: 50px;
+}
+.flats path {
+  opacity: 0;
+  cursor: pointer;
+}
+.flats path:hover {
+  opacity: 1;
+}
+.modal-info {
+  width: 40%;
+  padding: 50px 46px;
+}
+.flat-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 55px;
+}
+.flat-item {
+  margin-bottom: 10px;
+}
+.flat-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+  text-decoration: none;
+}
+.flat-link:hover {
+  text-decoration: underline;
+  color: #3596F5;
+}
+.modal-alert {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+  margin-top: 56px;
+}
+.modal-close-button {
+  position: absolute;
+  top: 38px;
+  right: 27px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+/*    FOOTER     */
+.footer {
+  background-color: #D7D7D7;
+  border-top: 4px solid #3596F5;
+  padding: 50px 0px 56px 0px;
+}
+.footer-row {
+  display: flex;
+  align-items: center;
+ 
+}
+.footer-column {
+  flex: 50%;
+}
+.footer-info {
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  color: #635854;
+  padding-left: 20px; 
+}
+.column {
+  display: block;
+  text-align: right;
+}
+.footer-contacts {
+  display: flex;
+  
+  align-items: center;
+}
+.footer-text, .footer-phone {
+  color: #635854;
+}
+.footer-logo {
+  margin-right: 37px;
+}
+.footer-tel {
+  margin-right: 59px;
+}
